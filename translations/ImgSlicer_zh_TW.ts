@@ -67,7 +67,7 @@
         <location filename="../build2019/app/ImgSlicer/ImgSlicer_autogen/include_Debug/ui_ImgSlicer.h" line="197"/>
         <location filename="../build2022/app/ImgSlicer/ImgSlicer_autogen/include_Debug/ui_ImgSlicer.h" line="197"/>
         <source>Run</source>
-        <translation>執行</translation>
+        <translation>Run</translation>
     </message>
     <message>
         <location filename="../app/ImgSlicer/ImgSlicer.ui" line="149"/>
