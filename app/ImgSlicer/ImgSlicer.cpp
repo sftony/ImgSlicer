@@ -37,7 +37,7 @@ namespace
 
         imgList.clear();
         for (const auto& fileInfo : fileList) {
-            QString suffix = fileInfo.completeSuffix().toLower();
+            QString suffix = fileInfo.suffix().toLower();
             if (isSupportedImgFormat(suffix)) {
                 imgList.push_back(fileInfo);
             }
