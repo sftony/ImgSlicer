@@ -128,7 +128,7 @@ void ImgSlicer::on_outDirBox_editingFinished()
 
 void ImgSlicer::on_runSwitch_released()
 {
-    if (ui->runSwitch->text() == "Run") {
+    if (!m_isRunning) {
         startWork();
     }
     else {
@@ -239,7 +239,8 @@ void ImgSlicer::startWork()
 
     m_workerThread = QThread::create([this, outDir, camCnt]() { run(outDir, camCnt); });
     connect(m_workerThread, &QThread::finished, this, [this]() {
-        ui->runSwitch->setText("Run");
+        ui->runSwitch->setText(tr("Run"));
+        m_isRunning = false;
 
         QMessageBox msgBox(this);
         if (m_wasInterrupted) {
@@ -261,7 +262,8 @@ void ImgSlicer::startWork()
     });
 
     m_workerThread->start();
-    ui->runSwitch->setText("Stop");
+    ui->runSwitch->setText(tr("Stop"));
+    m_isRunning = true;
 }
 
 void ImgSlicer::terminateWork()

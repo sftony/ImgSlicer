@@ -43,6 +43,7 @@ private:
     int m_failedImgCnt = 0;
     bool m_wasInterrupted = false;
     QImage m_img;
+    bool m_isRunning = false;
 
     void run(const QString& outDir, int camCnt);
     void startWork();

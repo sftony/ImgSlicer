@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.31)
 
-project(ImgSlicer VERSION 1.0.1 LANGUAGES CXX)
+project(ImgSlicer VERSION 1.0.2 LANGUAGES CXX)
 configure_file("${PROJECT_SOURCE_DIR}/cmake/ImgSlicer_config.h.in"
                 "${PROJECT_BINARY_DIR}/ImgSlicer_config.h")
 
